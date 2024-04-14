@@ -34,3 +34,5 @@ Example: Install Blender v4.1.0
 
 Example: Updating to Blender v4.1.1
 ```fish blenderi 4.1.1```
+
+👏👏👏 Thanks to spitzak on [devtalk.blender.org](https://devtalk.blender.org/t/how-to-install-in-linux-including-desktop-icons/33513/6) for giving detailed steps.
