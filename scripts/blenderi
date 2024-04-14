@@ -6,10 +6,10 @@ echo 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):'
 versionCheck
 echo -e '\e[36mInstalling Blender \e[33mv'$bver'\e[0m'
 set -l fver (echo $bver | sed -r 's/^(.*\..*)\..*$/\1/')
-sudo mkdir /opt/Blender
 wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-$arch.tar.xz
-sudo tar xf ~/Downloads/blender-$bver-linux-x64.tar.xz -C /opt/Blender/ --strip-components=1
-rm ~/Downloads/blender-$bver-linux-x64.tar.xz
+folderCheck
+sudo tar xf ~/Downloads/blender-$bver-$arch.tar.xz -C /opt/Blender/ --strip-components=1
+rm ~/Downloads/blender-$bver-$arch.tar.xz
 cd /opt
 sudo ln -s Blender blender
 sudo ln -s /opt/blender/blender /usr/bin/blender
