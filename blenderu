@@ -1,0 +1,13 @@
+#!/usr/bin/fish
+
+set bver $argv
+set fver (string sub -l 3 $bver)
+echo -e '\e[32mUpdating Blender to \e[33mv'$bver'\e[0m'
+wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-linux-x64.tar.xz
+sudo rm -rf /opt/blender/*
+sudo tar xf ~/Downloads/blender-$bver-linux-x64.tar.xz -C /opt/blender/ --strip-components=1
+rm ~/Downloads/blender-$bver-linux-x64.tar.xz
+sed -i (echo (grep -n 'Icon=b' /blender/blender.desktop | head  -1) | grep -oP '.*(?=:)')'s/.*/Icon=\/usr\/share\/icons\/hicolor\/scalable\/blender.svg/' /blender/blender.desktop
+sudo update-icon-caches /usr/share/icons/Pop/
+echo 'Done!'
+killall -3 gnome-shell
