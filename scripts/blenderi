@@ -1,8 +1,11 @@
 #!/usr/bin/fish
 
-set -l bver $argv
+source ./helpers/helper
+
+echo 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):'
+versionCheck
+echo -e '\e[36mInstalling Blender \e[33mv'$bver'\e[0m'
 set -l fver (string sub -l 3 $bver)
-echo -e '\e[32mInstalling Blender \e[33mv'$bver'\e[0m'
 sudo mkdir /opt/Blender
 wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-linux-x64.tar.xz
 sudo tar xf ~/Downloads/blender-$bver-linux-x64.tar.xz -C /opt/Blender/ --strip-components=1
@@ -18,5 +21,5 @@ echo 'application/x-blender				blend' | sudo tee -a /etc/mime.types
 sudo ln -s /opt/blender/blender-symbolic.svg /usr/share/icons/Pop/scalable/mimetypes/application-x-blender.svg
 sudo update-icon-caches /usr/share/icons/Pop/
 echo -e '[Thumbnailer Entry]\nTryExec=/usr/bin/blender-thumbnailer\nExec=/usr/bin/blender-thumbnailer %i %o\nMimeType=application/x-blender;\n' | sudo tee -a /usr/share/thumbnailers/x-blender.thumbnailer
-echo 'Done!'
+echo '\e[32mDone!\e[0m'
 killall -3 gnome-shell

@@ -1,0 +1,12 @@
+#!/usr/bin/fish
+
+function versionCheck
+   while true
+      read ver
+      set -g bver $ver
+      if string match -qr '^2\.83|90|91|92|93\.[0-9]$|^3\.[0-6]\.[0-9]$|^4\.[0-1]\.[0-9]$' -- $ver
+         break
+      end
+      echo -e '\e[31mPlease enter a valid version\e[0m'
+   end
+end
