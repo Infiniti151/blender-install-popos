@@ -1,6 +1,7 @@
 # README
 
-This repo allows installing/updating Blender in PopOS. It uses the fish shell for both of those actions. It was created as the latest versions of Blender take a long time to appear in the official repo.
+This repo allows installing/updating Blender v2.83+ in PopOS. It uses the fish shell for both of those actions. It was created as the latest versions of Blender take a long time to appear in the official repo. Doesn't work with Blender verions <2.83 due to versioning differences.
+
 This repo includes two fish scripts:
 1. blenderi : For installing Blender
 2. blenderu : For updating Blender
