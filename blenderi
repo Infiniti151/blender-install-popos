@@ -1,0 +1,22 @@
+#!/usr/bin/fish
+
+set bver $argv
+set fver (string sub -l 3 $bver)
+echo -e '\e[32mInstalling Blender \e[33mv'$bver'\e[0m'
+sudo mkdir /opt/Blender
+wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-linux-x64.tar.xz
+sudo tar xf ~/Downloads/blender-$bver-linux-x64.tar.xz -C /opt/Blender/ --strip-components=1
+rm ~/Downloads/blender-$bver-linux-x64.tar.xz
+cd /opt
+sudo ln -s Blender blender
+sudo ln -s /opt/blender/blender /usr/bin/blender
+sudo ln -s /opt/blender/blender-thumbnailer /usr/bin/blender-thumbnailer
+sudo ln -s /opt/blender/blender.desktop /usr/share/applications/
+sudo ln -s /opt/blender/blender.svg /usr/share/icons/hicolor/scalable/
+sed -i 's{Icon=blender{Icon=/usr/share/icons/hicolor/scalable/blender.svg{' /blender/blender.desktop
+echo 'application/x-blender				blend' | sudo tee -a /etc/mime.types
+sudo ln -s /opt/blender/blender-symbolic.svg /usr/share/icons/Pop/scalable/mimetypes/application-x-blender.svg
+sudo update-icon-caches /usr/share/icons/Pop/
+echo -e '[Thumbnailer Entry]\nTryExec=/usr/bin/blender-thumbnailer\nExec=/usr/bin/blender-thumbnailer %i %o\nMimeType=application/x-blender;\n' | sudo tee -a /usr/share/thumbnailers/x-blender.thumbnailer
+echo 'Done!'
+killall -3 gnome-shell
