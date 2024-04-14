@@ -1,7 +1,7 @@
 #!/usr/bin/fish
 
-set bver $argv
-set fver (string sub -l 3 $bver)
+set -l bver $argv
+set -l fver (string sub -l 3 $bver)
 echo -e '\e[32mUpdating Blender to \e[33mv'$bver'\e[0m'
 wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-linux-x64.tar.xz
 sudo rm -rf /opt/blender/*
