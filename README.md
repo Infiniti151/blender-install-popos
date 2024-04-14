@@ -25,15 +25,19 @@ This repo includes two fish scripts:
 1. fish shell 🐬
 
 ## Installing Blender v.x.x.x with blenderi
-```fish blenderi x.x.x```
+Open a fish shell inside the repo and execute: 
+```fish scripts/blenderi```
 
-Example: Install Blender v4.1.0
-```fish blenderi 4.1.0```
+![v4.0.0 Install](./snaps/install.png)
+
+Example: Install Blender v4.0.0
 
 ## Updating Blender to v.x.x.x with blenderu
-```fish blenderu x.x.x```
+Open a fish shell inside the repo and execute: 
+```fish scripts/blenderu```
 
-Example: Updating to Blender v4.1.1
-```fish blenderi 4.1.1```
+![v4.1.0 Update](./snaps/update.png)
+
+Example: Updating to Blender v4.1.0
 
 👏👏👏 Thanks to spitzak on [devtalk.blender.org](https://devtalk.blender.org/t/how-to-install-in-linux-including-desktop-icons/33513/6) for giving detailed steps.
