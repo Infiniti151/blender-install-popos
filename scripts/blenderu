@@ -7,9 +7,9 @@ versionCheck
 set -l fver (echo $bver | sed -r 's/^(.*\..*)\..*$/\1/')
 echo -e '\e[36mUpdating Blender to \e[33mv'$bver'\e[0m'
 wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-$arch.tar.xz
-sudo rm -rf /opt/blender/*
-sudo tar xf ~/Downloads/blender-$bver-linux-x64.tar.xz -C /opt/blender/ --strip-components=1
-rm ~/Downloads/blender-$bver-linux-x64.tar.xz
+folderCheck
+sudo tar xf ~/Downloads/blender-$bver-$arch.tar.xz -C /opt/Blender/ --strip-components=1
+rm ~/Downloads/blender-$bver-$arch.tar.xz
 sed -i 's{Icon=blender{Icon=/usr/share/icons/hicolor/scalable/blender.svg{' /opt/blender/blender.desktop
 sudo update-icon-caches /usr/share/icons/Pop/
 echo '\e[32mDone!\e[0m'
