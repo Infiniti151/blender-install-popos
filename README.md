@@ -7,7 +7,7 @@ This repo includes two fish scripts:
 2. blenderu : For updating Blender
 
 ## Steps in blenderi
-1. Download the tarball of the specified version of Blender
+1. Download specified version tarball to ~/Downloads
 2. Extract tarball to /opt/Blender
 3. Delete tarball
 4. Create symlinks for blender and blender-thumbnailer binaries
@@ -15,7 +15,7 @@ This repo includes two fish scripts:
 6. Restart Gnome shell to make Blender appear in the launcher (Works with X11. If you're using Wayland, you'll need to re-login)
 
 ## Steps in blenderu
-1. Download the tarball of the specified version of Blender
+1. Download specified version tarball to ~/Downloads
 2. Extract tarball to /opt/Blender
 3. Delete tarball
 4. Update icon caches with Blender icons
