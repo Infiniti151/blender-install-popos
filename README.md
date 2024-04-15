@@ -49,4 +49,4 @@ Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 3
 ![Uninstall](./images/uninstall.png)
 Example: Uninstalling Blender
 
-👏👏👏 Thanks to spitzak on [devtalk.blender.org](https://devtalk.blender.org/t/how-to-install-in-linux-including-desktop-icons/33513/6) for giving detailed steps.
+👏👏👏 Thanks to **spitzak** on [devtalk.blender.org](https://devtalk.blender.org/t/how-to-install-in-linux-including-desktop-icons/33513/6) for giving detailed steps.
