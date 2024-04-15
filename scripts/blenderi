@@ -8,7 +8,7 @@ echo -e '\e[36mInstalling Blender \e[33mv'$bver'\e[0m'
 set -l fver (echo $bver | sed -r 's/^(.*\..*)\..*$/\1/')
 wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-$arch.tar.xz
 folderCheck
-sudo tar xf ~/Downloads/blender-$bver-$arch.tar.xz -C /opt/Blender/ --strip-components=1
+sudo tar xf ~/Downloads/blender-$bver-$arch.tar.xz -C /opt/Blender --strip-components=1
 rm ~/Downloads/blender-$bver-$arch.tar.xz
 cd /opt
 sudo ln -s Blender blender
