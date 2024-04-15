@@ -34,19 +34,19 @@ This repo enables installing/updating/uninstalling Blender v2.83+ in PopOS. It u
 ## Install Blender
 Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 1
 
-![v3.6.9 Install](./snaps/install.png)
+![v3.6.9 Install](./images/install.png)
 Example: Installing Blender v3.6.9
 
 ## Update Blender
 Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 2
 
-![v4.1.0 Update](./snaps/update.png)
+![v4.1.0 Update](./images/update.png)
 Example: Updating to Blender v4.1.0
 
 ## Uninstall Blender
 Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 3
 
-![Uninstall](./snaps/uninstall.png)
+![Uninstall](./images/uninstall.png)
 Example: Uninstalling Blender
 
 👏👏👏 Thanks to spitzak on [devtalk.blender.org](https://devtalk.blender.org/t/how-to-install-in-linux-including-desktop-icons/33513/6) for giving detailed steps.
