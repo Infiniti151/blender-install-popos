@@ -17,9 +17,12 @@ function versionCheck
 end
 
 function folderCheck
-   if [ -d '/opt/Blender' ]
-      sudo rm -rf /opt/Blender/*
-   else
+   if [ ! -d '/opt' ]
+      sudo mkdir /opt
+   end
+   if [ ! -d '/opt/Blender' ]
       sudo mkdir /opt/Blender
+   else
+      sudo rm -rf /opt/Blender/*
    end
 end
