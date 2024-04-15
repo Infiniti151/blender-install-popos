@@ -26,7 +26,7 @@ This repo includes two fish scripts:
 
 ## Installing Blender v.x.x.x with blenderi
 Open a fish shell inside the repo and execute: 
-```fish scripts/blenderi```
+```fish scripts/blenderi.fish```
 
 ![v4.0.0 Install](./snaps/install.png)
 
@@ -34,7 +34,7 @@ Example: Install Blender v4.0.0
 
 ## Updating Blender to v.x.x.x with blenderu
 Open a fish shell inside the repo and execute: 
-```fish scripts/blenderu```
+```fish scripts/blenderu.fish```
 
 ![v4.1.0 Update](./snaps/update.png)
 
