@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-function versionCheck
+function versionCheck -d "Validate user inputted version. Doesn't check for valid bugfix version atm"
    echo 🔢 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):' 🔢
    while true
       set -g bver 
@@ -20,7 +20,7 @@ function versionCheck
    end
 end
 
-function folderCheck
+function folderCheck -d "Create /opt and /opt/Blender"
    if [ ! -d '/opt' ]
       sudo mkdir /opt
    end
