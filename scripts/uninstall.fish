@@ -1,7 +1,5 @@
 #!/usr/bin/fish
 
-source ./helpers/helper.fish
-
 echo -e ⚠️ 'Are you sure (y/n)?'⚠️
 read op
 switch $op
