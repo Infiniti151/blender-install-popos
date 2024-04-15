@@ -1,6 +1,7 @@
 #!/usr/bin/fish
 
 function versionCheck
+   echo 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):'
    while true
       set -g bver 
       read bver

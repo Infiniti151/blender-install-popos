@@ -2,7 +2,6 @@
 
 source ./helpers/helper.fish
 
-echo 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):'
 versionCheck
 set -l fver (echo $bver | sed -r 's/^(.*\..*)\..*$/\1/')
 echo -e '\e[36mUpdating Blender to \e[33mv'$bver'\e[0m'
