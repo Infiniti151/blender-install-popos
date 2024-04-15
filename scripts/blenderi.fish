@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-source ./helpers/helper
+source ./helpers/helper.fish
 
 echo 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):'
 versionCheck
