@@ -2,7 +2,7 @@
 
 This repo enables installing/updating/uninstalling Blender v2.83+ in PopOS. It uses fish shell for all of those actions. It was created as the latest versions of Blender take a long time to appear in the official repo. Doesn't work with Blender versions < 2.83.x due to versioning differences.
 
-## Install actions
+## Install actions 
 1. Download specified version tarball to ~/Downloads
 2. Extract tarball to /opt/Blender
 3. Delete tarball
@@ -22,7 +22,7 @@ This repo enables installing/updating/uninstalling Blender v2.83+ in PopOS. It u
 ## Uninstall actions
 1. Delete Blender directory (/opt/Blender)
 2. Delete binaries
-3. Delete .desktop file
+3. Delete desktop file
 4. Delete icon
 5. Delete MIME type
 6. Remove from default apps
@@ -31,19 +31,19 @@ This repo enables installing/updating/uninstalling Blender v2.83+ in PopOS. It u
 ## Dependencies
 1. fish shell 🐬
 
-## Install Blender
+## ⬇️ Install Blender ⬇️
 Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 1
 
 ![v3.6.9 Install](./images/install.png)
 Example: Installing Blender v3.6.9
 
-## Update Blender
+## ⬆️ Update Blender ⬆️
 Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 2
 
 ![v4.1.0 Update](./images/update.png)
 Example: Updating to Blender v4.1.0
 
-## Uninstall Blender
+## ❌ Uninstall Blender ❌
 Open a fish shell inside the repo, execute ```fish blend.fish```, and enter 3
 
 ![Uninstall](./images/uninstall.png)
