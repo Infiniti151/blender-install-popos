@@ -1,9 +1,9 @@
 #!/usr/bin/fish
 
-function versionCheck -d "Validate user inputted version. Doesn't check for valid bugfix version atm"
+function versionCheck -d "Validate major and minor version"
    echo 🔢 'Enter Blender version in the format x.x.x (Only v2.83+ are supported):' 🔢
-   while true
-      set -g bver 
+   set -g bver
+   while true 
       read bver
       if [ $bver = 'q' ]
          exit
@@ -29,5 +29,6 @@ function folderCheck -d "Create /opt and /opt/Blender"
       echo -e 🚀'\e[36mCreated /opt/Blender\e[0m'🚀
    else
       sudo rm -rf /opt/Blender/*
+      echo -e 🚀'\e[36mCleaned /opt/Blender\e[0m'🚀
    end
 end
