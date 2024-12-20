@@ -14,7 +14,6 @@ Install performs the following steps:
 5. Create MIME type
 6. Set as the default app for .blend files 
 7. Update icon caches with Blender icons
-8. Restart Gnome shell to make Blender appear in the launcher (Works with X11. If you're using Wayland, you'll need to re-login)
 
 To install, open a fish shell inside the repo, execute ```fish blend.fish```, and enter 1
 
@@ -28,7 +27,6 @@ Update performs the following steps:
 3. Extract tarball to /opt/Blender
 4. Delete tarball
 5. Update icon caches with Blender icons
-6. Restart Gnome shell to make Blender appear in the launcher (Works with X11. If you're using Wayland, you'll need to re-login)
 
 To update, open a fish shell inside the repo, execute ```fish blend.fish```, and enter 2
 
@@ -43,7 +41,6 @@ Uninstall performs the following steps:
 4. Delete icon
 5. Delete MIME type
 6. Remove from default apps
-7. Restart Gnome shell to remove Blender from the launcher (Works with X11. If you're using Wayland, you'll need to re-login)
 
 To uninstall, open a fish shell inside the repo, execute ```fish blend.fish```, and enter 3
 

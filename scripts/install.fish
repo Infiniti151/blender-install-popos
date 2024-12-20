@@ -3,9 +3,9 @@
 source ./helpers/helper.fish
 
 versionCheck
+getDownloadURL
 echo -e 😎'\e[36mInstalling Blender \e[33mv'$bver'\e[0m'😎
-set -l fver (echo $bver | sed -r 's/^(.*\..*)\..*$/\1/')
-wget -P ~/Downloads/ https://download.blender.org/release/Blender$fver/blender-$bver-$arch.tar.xz &> /dev/null
+wget -P ~/Downloads/ $download_url &> /dev/null
 echo -e 🚀'\e[36mDownloaded tarball\e[0m'🚀
 folderCheck
 sudo tar xf ~/Downloads/blender-$bver-$arch.tar.xz -C /opt/Blender --strip-components=1
@@ -27,6 +27,4 @@ echo 'application/x-blender=blender.desktop;' | sudo tee -a ~/.config/mimeapps.l
 echo -e 🚀'\e[36mSet as the default app\e[0m'🚀
 sudo update-icon-caches /usr/share/icons/Pop/
 echo -e ♻️ '\e[36mUpdated icon caches'♻️
-killall -3 gnome-shell
-echo -e ♻️ 'Restarted gnome shell'♻️
 echo -e ✨'\e[32mDone!\e[0m'✨

@@ -21,8 +21,6 @@ switch $op
         echo -e 🗑️ 'Deleted directory'🗑️
         sudo update-icon-caches /usr/share/icons/Pop/
         echo -e ♻️ '\e[36mUpdated icon caches'♻️
-        killall -3 gnome-shell
-        echo -e ♻️ 'Restarted gnome shell'♻️
         echo -e ✔️ '\e[32mSuccessfully uninstalled Blender!\e[0m'✔️
     case '*'
        exit
