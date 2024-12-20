@@ -43,6 +43,7 @@ function getDownloadURL -d "Generate download URL"
       set -l fver (echo $bver | sed -r 's/^(.*\..*)\..*$/\1/')
       set -g download_url (string join '' $url 'Blender' $fver '/blender-' $bver '-' $arch '.tar.xz')
    end
+   echo $bver > ../blender.log
 end
 
 function folderCheck -d "Create /opt and /opt/Blender"

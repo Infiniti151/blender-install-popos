@@ -4,6 +4,7 @@ echo -e ⚠️ 'Are you sure (y/n)?'⚠️
 read op
 switch $op
     case 'y' 'Y'
+        true > '../blender.log'
         sudo unlink /usr/bin/blender
         sudo unlink /usr/bin/blender-thumbnailer
         echo -e 🗑️ '\e[31mDeleted binaries'🗑️
