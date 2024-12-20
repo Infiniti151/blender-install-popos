@@ -28,9 +28,9 @@ function getDownloadURL -d "Generate download URL"
    if test -z "$bver"
       set -g arch 'linux-x64'       
       set -l fver (wget -O - $url 2>&1 | \
-         awk 'BEGIN{RS="</a>"; FS="<*>"};NF>1{local = $NF};/Blender[1-9]/ {loc = $NF} END {print loc}')
+         awk 'BEGIN{RS="</a>";FS="<*>"}/Blender[1-9]/{a=$NF}END{print a}')
       set -l slug (wget -O - $url$fver 2>&1 | \
-         awk 'BEGIN{RS="</a>"; FS="<*>"};NF>1{local = $NF};/linux/ {loc = $NF} END {print loc}')
+         awk 'BEGIN{RS="</a>";FS="<*>"};/linux/{a=$NF}END{print a}')
       set -g bver (echo $slug | awk '{print substr($0, 9, 5)}')
       set -g download_url $url$fver$slug
    else
