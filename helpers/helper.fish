@@ -28,15 +28,9 @@ function getDownloadURL -d "Generate download URL"
    if test -z "$bver"
       set -g arch 'linux-x64'       
       set -l fver (wget -O - $url 2>&1 | \
-               grep -io '<a href=['"'"'"][^"'"'"']*['"'"'"]' | \
-               sed -e 's/^<a href=["'"'"']//i' -e 's/["'"'"']$//i' | \
-               grep Blender[1-9] | \
-               awk 'END {print}')
+         awk 'BEGIN{RS="</a>"; FS="<*>"};NF>1{local = $NF};/Blender[1-9]/ {loc = $NF} END {print loc}')
       set -l slug (wget -O - $url$fver 2>&1 | \
-           grep -io '<a href=['"'"'"][^"'"'"']*['"'"'"]' | \
-           sed -e 's/^<a href=["'"'"']//i' -e 's/["'"'"']$//i' | \
-           grep linux | \
-           awk 'END {print}')
+         awk 'BEGIN{RS="</a>"; FS="<*>"};NF>1{local = $NF};/linux/ {loc = $NF} END {print loc}')
       set -g bver (echo $slug | awk '{print substr($0, 9, 5)}')
       set -g download_url $url$fver$slug
    else
