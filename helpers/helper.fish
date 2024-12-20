@@ -35,7 +35,7 @@ function getDownloadURL -d "Generate download URL"
       set -l slug (wget -O - $url$fver 2>&1 | \
            grep -io '<a href=['"'"'"][^"'"'"']*['"'"'"]' | \
            sed -e 's/^<a href=["'"'"']//i' -e 's/["'"'"']$//i' | \
-           grep blender-[0-9].[0-9].[0-9]-linux\* | \
+           grep linux | \
            awk 'END {print}')
       set -g bver (echo $slug | awk '{print substr($0, 9, 5)}')
       set -g download_url $url$fver$slug
