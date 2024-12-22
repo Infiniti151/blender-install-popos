@@ -2,6 +2,11 @@
 
 source ./helpers/helper.fish
 
+if [ ! -z "$(command -v blender)" ]
+    echo "Blender is already installed. Please use the update option. Exiting."
+    return
+end
+echo 🔢 'Press Enter to install the latest version or enter version in the format x.x.x (Only v2.83+ are supported):' 🔢
 versionCheck
 getDownloadURL
 echo -e 😎'\e[36mInstalling Blender \e[33mv'$bver'\e[0m'😎

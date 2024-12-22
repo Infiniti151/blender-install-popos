@@ -2,8 +2,17 @@
 
 source ./helpers/helper.fish
 
+if [ -z "$(command -v blender)" ]
+    echo "Blender is not installed. Please use the install option. Exiting."
+    return
+end
+echo 🔢 'Press Enter to update to the latest version or enter version in the format x.x.x (Only v2.83+ are supported):' 🔢
 versionCheck
 getDownloadURL
+if [ (blender --version | awk 'NR==1 {print $2}') = $bver ]
+    echo "Latest version of Blender (v$bver) is already installed. Exiting."
+    return
+end
 echo -e 😎'\e[36mUpdating Blender to \e[33mv'$bver'\e[0m'😎
 wget -P ~/Downloads/ $download_url &> /dev/null
 echo -e 🚀'\e[36mDownloaded tarball\e[0m'🚀
