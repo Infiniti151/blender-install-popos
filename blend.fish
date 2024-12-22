@@ -14,5 +14,6 @@ switch $sel
     case '3'
         fish ./scripts/uninstall.fish
     case '*'
+        exit
 end
 

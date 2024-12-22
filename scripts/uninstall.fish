@@ -1,5 +1,9 @@
 #!/usr/bin/fish
 
+if [ -z "$(command -v blender)" ]
+    echo "Blender is not installed. Exiting."
+    return
+end
 echo -e ⚠️ 'Are you sure (y/n)?'⚠️
 read op
 switch $op
@@ -24,5 +28,5 @@ switch $op
         echo -e ♻️ '\e[36mUpdated icon caches'♻️
         echo -e ✔️ '\e[32mSuccessfully uninstalled Blender!\e[0m'✔️
     case '*'
-       exit
+        exit
 end

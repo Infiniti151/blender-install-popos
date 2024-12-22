@@ -1,7 +1,6 @@
 #!/usr/bin/fish
 
 function versionCheck -d "Validate major and minor version"
-   echo 🔢 'Press Enter to update to the latest version or enter version in the format x.x.x (Only v2.83+ are supported):' 🔢
    set -g bver
    while true 
       read bver
